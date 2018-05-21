@@ -1,0 +1,27 @@
+.bitcoinButtons {
+    -fx-background-radius: 15px;
+    -fx-border-radius: 30;
+    -fx-background-color: #FF9100;
+}
+
+.bitcoinButtons:hover {
+    -fx-background-color: linear-gradient(to right, #FF6D00 0%, #FF9100 25%, #FFAB40 50%, #FFD180 100%);
+}
+.ethereumButtons {
+    -fx-background-radius: 15px;
+    -fx-border-radius: 30;
+    -fx-background-color: #424242;
+}
+
+.ethereumButtons:hover {
+    -fx-background-color: linear-gradient(to right, #212121 0%, #424242 25%, #616161 50%, #757575 100%);
+}
+.moneroButtons {
+    -fx-background-radius: 15px;
+    -fx-border-radius: 30;
+    -fx-background-color:  #FF6D00;
+}
+
+.moneroButtons:hover {
+    -fx-background-color: linear-gradient(to right, #FF6D00 0%, #FF9100 25%, #FFAB40 50%, #757575 100%);
+}

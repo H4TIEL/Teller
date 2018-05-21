@@ -1,0 +1,67 @@
+.forgot {
+    -fx-background-color: transparent;
+}
+
+.forgot:hover {
+    -fx-text-fill: linear-gradient(to right, #2962FF 0%, #2979FF 25%, #448AFF 50%, #82B1FF 100%);;
+
+}
+
+.login {
+
+    -fx-background-color: #2962FF;
+}
+
+.login:hover {
+    -fx-background-color: linear-gradient(to right, #2962FF 0%, #2979FF 25%, #448AFF 50%, #82B1FF 100%);
+}
+
+.text-field {
+    -fx-background-radius: 30;
+    -fx-border-color: #BDBDBD;
+    -fx-border-radius: 30;
+    -fx-focus-traversable: false;
+}
+
+.text-field:focused {
+    -fx-background-radius: 30;
+    -fx-border-color: #2962FF;
+    -fx-border-width: 3;
+    -fx-background-color: white;
+    -fx-border-radius: 30;
+    -fx-focus-traversable: false;
+}
+
+.exitButton {
+    -fx-background-radius: 55em;
+    -fx-background-image: url(/sample/res/icons/drawable-xxxhdpi/ic_cancel_blue_A700_48dp.png);
+    -fx-background-color: white;
+    -fx-background-position: center;
+    -fx-background-size: 32px;
+    -fx-min-width: 26px;
+    -fx-pref-height: 26px;
+    -fx-pref-width: 26px;
+    -fx-min-height: 26px;
+    -fx-max-width: 26px;
+    -fx-max-height: 26px;
+}
+
+.exitButton:hover {
+
+    -fx-background-radius: 55em;
+    -fx-background-image: url(/sample/res/icons/drawable-xxxhdpi/ic_cancel_red_A400_48dp.png);
+    -fx-background-color: white;
+    -fx-background-position: center;
+    -fx-background-size: 32px;
+    -fx-min-width: 26px;
+    -fx-pref-height: 26px;
+    -fx-pref-width: 26px;
+    -fx-min-height: 26px;
+    -fx-max-width: 26px;
+    -fx-max-height: 26px;
+}
+
+.outer {
+    -fx-background-color: transparent;
+    -fx-padding: 10;
+}

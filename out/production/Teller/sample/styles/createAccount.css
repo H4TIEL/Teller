@@ -1,0 +1,60 @@
+.progress-bar {
+    -fx-background-radius: 10, 10, 10, 10;
+}
+
+.progress-bar .bar {
+    -fx-background-color: #2962FF;
+    -fx-background-radius: 10px;
+}
+
+.progress-bar .track {
+    -fx-background-color: transparent;
+}
+
+.documents {
+    -fx-background-color: transparent;
+}
+
+.documents:hover {
+    -fx-text-fill: linear-gradient(to right, #2962FF 0%, #2979FF 25%, #448AFF 50%, #82B1FF 100%);;
+
+}
+.text-field {
+    -fx-alignment: bottom-right;
+    -fx-focus-traversable: false;
+    -fx-text-alignment: right;
+    -fx-background-color: white;
+    -fx-font-size: 15px;
+    -fx-text-fill: #BDBDBD;
+    -fx-fill: white;
+}
+
+.pane {
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+}
+
+.topPane {
+    -fx-background-color: white;
+}
+.text {
+    -fx-text-fill: #BDBDBD;
+    -fx-font-size: 13px;
+}
+
+.check-box .box {
+    -fx-background-color: white;
+    -fx-border-color: transparent;
+    -fx-border-radius: 5px;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: white;
+}
+
+.check-box:selected .box {
+    -fx-background-color: #2962FF;
+}
+.createButton{
+    -fx-background-color: transparent;
+}

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="1200.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ServicesController">
+    <children>
+        <Pane fx:id="topPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" prefHeight="60.0" prefWidth="1200.0" styleClass="topPane" stylesheets="@../sample/styles/services.css">
+            <effect>
+                <DropShadow color="#bdbdbd" height="0.0" offsetY="5.0" radius="12.0" width="50.0" />
+            </effect>
+            <children>
+                <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="387.0">
+                    <children>
+                        <Pane layoutX="1000.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0">
+                            <padding>
+                                <Insets top="5.0" />
+                            </padding>
+                            <HBox.margin>
+                                <Insets right="20.0" />
+                            </HBox.margin>
+                            <children>
+                                <ImageView fx:id="lockImageView" fitHeight="25.0" fitWidth="25.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../sample/res/icons/drawable-xxxhdpi/ic_lock_outline_blue_A700_48dp.png" />
+                                    </image>
+                                </ImageView>
+                                <Button fx:id="lockButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleLockButtonClicked" onMouseEntered="#handleLockButtonEntered" onMouseExited="#handleLockButtonExited" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent;" />
+                            </children>
+                        </Pane>
+                        <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="65.0" prefWidth="65.0">
+                            <HBox.margin>
+                                <Insets bottom="5.0" top="5.0" />
+                            </HBox.margin>
+                            <children>
+                                <ImageView fitHeight="50.0" fitWidth="55.0" layoutX="15.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../sample/res/images/profile.gif" />
+                                    </image>
+                                </ImageView>
+                                <Circle fill="#00ff09" layoutX="24.0" layoutY="51.0" radius="8.0" stroke="#00ff098a" strokeType="INSIDE" />
+                            </children>
+                        </Pane>
+                        <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="147.0">
+                            <padding>
+                                <Insets top="5.0" />
+                            </padding>
+                            <children>
+                                <Text fill="#0000007d" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Teller" wrappingWidth="147.00000286102295">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Text>
+                            </children>
+                        </Pane>
+                        <Pane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0">
+                            <children>
+                                <ImageView fx:id="chatImageView" fitHeight="25.0" fitWidth="25.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../sample/res/icons/drawable-xxxhdpi/ic_chat_bubble_outline_blue_A700_48dp.png" />
+                                    </image>
+                                </ImageView>
+                                <Button fx:id="chatButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseEntered="#handleChatButtonEntered" onMouseExited="#handleChatButtonExited" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent;" />
+                            </children>
+                        </Pane>
+                    </children>
+                </HBox>
+            </children>
+            <cursor>
+                <Cursor fx:constant="DEFAULT" />
+            </cursor>
+        </Pane>
+        <HBox alignment="CENTER" layoutY="60.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1200.0">
+            <children>
+                <VBox alignment="TOP_CENTER" layoutX="340.0" layoutY="60.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="200.0" styleClass="card" stylesheets="@../sample/styles/services.css">
+                    <children>
+                        <ImageView fitHeight="125.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../sample/res/icons/drawable-xxxhdpi/ic_person_add_blue_A200_48dp.png" />
+                            </image>
+                            <VBox.margin>
+                                <Insets top="25.0" />
+                            </VBox.margin>
+                        </ImageView>
+                        <Text fill="#bdbdbd" layoutX="49.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Open accounts">
+                            <VBox.margin>
+                                <Insets bottom="20.0" top="20.0" />
+                            </VBox.margin>
+                        </Text>
+                        <Button fx:id="createButton" mnemonicParsing="false" onAction="#handleCreate" prefHeight="30.0" prefWidth="140.0" styleClass="servicesButtons" stylesheets="@../sample/styles/services.css" text="Create" textFill="WHITE">
+                            <font>
+                                <Font name="Lato Heavy" size="16.0" />
+                            </font>
+                            <effect>
+                                <DropShadow color="#448AFF" height="22.5" offsetX="2.0" offsetY="2.0" radius="10.125" width="20.0" />
+                            </effect>
+                            <VBox.margin>
+                                <Insets top="10.0" />
+                            </VBox.margin>
+                        </Button>
+                    </children>
+                    <effect>
+                        <DropShadow blurType="GAUSSIAN" color="#bdbdbd" height="50.0" offsetX="5.0" offsetY="5.0" radius="24.5" width="50.0" />
+                    </effect>
+                    <HBox.margin>
+                        <Insets right="25.0" />
+                    </HBox.margin>
+                </VBox>
+                <VBox alignment="TOP_CENTER" layoutX="460.0" layoutY="60.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="200.0" styleClass="card" stylesheets="@../sample/styles/services.css">
+                    <children>
+                        <ImageView fitHeight="125.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../sample/res/icons/drawable-xxxhdpi/ic_person_blue_A200_48dp.png" />
+                            </image>
+                            <VBox.margin>
+                                <Insets top="25.0" />
+                            </VBox.margin>
+                        </ImageView>
+                        <Text fill="#bdbdbd" strokeType="OUTSIDE" strokeWidth="0.0" text="Process account">
+                            <VBox.margin>
+                                <Insets bottom="20.0" top="20.0" />
+                            </VBox.margin>
+                        </Text>
+                        <Button fx:id="accessButton" mnemonicParsing="false" onAction="#handleAccessButton" prefHeight="30.0" prefWidth="140.0" styleClass="servicesButtons" stylesheets="@../sample/styles/services.css" text="Access" textFill="WHITE">
+                            <font>
+                                <Font name="Lato Heavy" size="16.0" />
+                            </font>
+                            <effect>
+                                <DropShadow color="#82B1FF" height="22.5" offsetX="2.0" offsetY="2.0" radius="10.125" width="20.0" />
+                            </effect>
+                            <VBox.margin>
+                                <Insets top="10.0" />
+                            </VBox.margin>
+                        </Button>
+                    </children>
+                    <effect>
+                        <DropShadow blurType="GAUSSIAN" color="#bdbdbd" height="50.0" offsetX="5.0" offsetY="5.0" radius="24.5" width="50.0" />
+                    </effect>
+                    <HBox.margin>
+                        <Insets left="25.0" right="25.0" />
+                    </HBox.margin>
+                </VBox>
+                <VBox alignment="TOP_CENTER" layoutX="560.0" layoutY="60.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="200.0" styleClass="card" stylesheets="@../sample/styles/services.css">
+                    <children>
+                        <ImageView fitHeight="125.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../sample/res/icons/drawable-xxxhdpi/ic_equalizer_blue_A200_48dp.png" />
+                            </image>
+                            <VBox.margin>
+                                <Insets top="25.0" />
+                            </VBox.margin>
+                        </ImageView>
+                        <Text fill="#bdbdbd" strokeType="OUTSIDE" strokeWidth="0.0" text="Currency exhange">
+                            <VBox.margin>
+                                <Insets bottom="20.0" top="20.0" />
+                            </VBox.margin>
+                        </Text>
+                        <Button fx:id="exchangeButton" mnemonicParsing="false" onAction="#handleExchangeButton" prefHeight="30.0" prefWidth="140.0" styleClass="servicesButtons" stylesheets="@../sample/styles/services.css" text="Exchange" textFill="WHITE">
+                            <font>
+                                <Font name="Lato Heavy" size="16.0" />
+                            </font>
+                            <effect>
+                                <DropShadow color="#448AFF" height="22.5" offsetX="2.0" offsetY="2.0" radius="10.125" width="20.0" />
+                            </effect>
+                            <VBox.margin>
+                                <Insets top="10.0" />
+                            </VBox.margin>
+                        </Button>
+                    </children>
+                    <effect>
+                        <DropShadow blurType="GAUSSIAN" color="#bdbdbd" height="50.0" offsetX="5.0" offsetY="5.0" radius="24.5" width="50.0" />
+                    </effect>
+                    <HBox.margin>
+                        <Insets left="25.0" right="25.0" />
+                    </HBox.margin>
+                </VBox>
+                <VBox alignment="TOP_CENTER" layoutX="660.0" layoutY="60.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="200.0" styleClass="card" stylesheets="@../sample/styles/services.css">
+                    <children>
+                        <ImageView fitHeight="125.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../sample/res/icons/drawable-xxxhdpi/ic_account_balance_wallet_blue_A200_48dp.png" />
+                            </image>
+                            <VBox.margin>
+                                <Insets top="25.0" />
+                            </VBox.margin>
+                        </ImageView>
+                        <Text fill="#bdbdbd" strokeType="OUTSIDE" strokeWidth="0.0" text="Cryptocurrencies">
+                            <VBox.margin>
+                                <Insets bottom="20.0" top="20.0" />
+                            </VBox.margin>
+                        </Text>
+                        <Button fx:id="cryptoButton" mnemonicParsing="false" onAction="#handleCryptoButton" prefHeight="30.0" prefWidth="140.0" styleClass="servicesButtons" stylesheets="@../sample/styles/services.css" text="Crypto" textFill="WHITE">
+                            <font>
+                                <Font name="Lato Heavy" size="16.0" />
+                            </font>
+                            <effect>
+                                <DropShadow color="#448AFF" height="22.5" offsetX="2.0" offsetY="2.0" radius="10.125" width="20.0" />
+                            </effect>
+                            <VBox.margin>
+                                <Insets top="10.0" />
+                            </VBox.margin>
+                        </Button>
+                    </children>
+                    <effect>
+                        <DropShadow blurType="GAUSSIAN" color="#bdbdbd" height="50.0" offsetX="5.0" offsetY="5.0" radius="24.5" width="50.0" />
+                    </effect>
+                    <HBox.margin>
+                        <Insets left="25.0" />
+                    </HBox.margin>
+                </VBox>
+            </children>
+        </HBox>
+    </children>
+</Pane>

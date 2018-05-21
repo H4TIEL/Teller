@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane prefHeight="400.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.CryptoController">
+   <children>
+      <Pane fx:id="topPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" prefHeight="60.0" prefWidth="1200.0" styleClass="topPane" stylesheets="@../sample/styles/services.css">
+         <effect>
+            <DropShadow color="#bdbdbd" height="0.0" offsetY="5.0" radius="12.0" width="50.0" />
+         </effect>
+         <children>
+            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="387.0">
+               <children>
+                  <Pane layoutX="1000.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0">
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                     <children>
+                        <ImageView fx:id="lockImageView" fitHeight="25.0" fitWidth="25.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../sample/res/icons/drawable-xxxhdpi/ic_lock_outline_blue_A700_48dp.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="lockButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleLockButtonClicked" onMouseEntered="#handleLockButtonMouseEntered" onMouseExited="#handleLockButtonMouseExited" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent;" />
+                     </children>
+                  </Pane>
+                  <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="65.0" prefWidth="65.0">
+                     <HBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </HBox.margin>
+                     <children>
+                        <ImageView fitHeight="50.0" fitWidth="55.0" layoutX="15.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../sample/res/images/profile.gif" />
+                           </image>
+                        </ImageView>
+                        <Circle fill="#00ff09" layoutX="24.0" layoutY="51.0" radius="8.0" stroke="#00ff098a" strokeType="INSIDE" />
+                     </children>
+                  </Pane>
+                  <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="147.0">
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                     <children>
+                        <Text fill="#0000007d" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Teller" wrappingWidth="147.00000286102295">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0">
+                     <children>
+                        <ImageView fx:id="chatImageView" fitHeight="25.0" fitWidth="25.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../sample/res/icons/drawable-xxxhdpi/ic_chat_bubble_outline_blue_A700_48dp.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="chatButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseEntered="#handleChatButtonMouseEntered" onMouseExited="#handleChatButtonMouseExited" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent;" />
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+            <Pane layoutX="1058.0" layoutY="5.0" prefHeight="50.0" prefWidth="50.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@res/icons/drawable-xxxhdpi/ic_swap_vertical_circle_blue_A700_48dp.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="syncRatesButton" layoutX="1.0" layoutY="-2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleSyncRates" prefHeight="50.0" prefWidth="50.0" styleClass="createButton" stylesheets="@styles/createAccount.css" />
+               </children>
+            </Pane>
+            <Text fx:id="syncRatesText" fill="#bdbdbd" layoutX="951.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sync rates" textAlignment="RIGHT" wrappingWidth="100.0" />
+            <Pane layoutX="1148.0" layoutY="4.0" prefHeight="50.0" prefWidth="50.0">
+               <children>
+                  <ImageView fx:id="backImageView" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@res/icons/drawable-xxxhdpi/ic_keyboard_arrow_left_blue_A700_48dp.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="backButton" layoutX="1.0" layoutY="-2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleBackButton" onMouseEntered="#handleBackButtonMouseEntered" onMouseExited="#handleBackButtonMouseExited" prefHeight="50.0" prefWidth="50.0" styleClass="createButton" stylesheets="@styles/createAccount.css" />
+               </children>
+            </Pane>
+            <Text fx:id="internetAccessText" fill="#bdbdbd" layoutX="764.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Internet access" textAlignment="RIGHT" wrappingWidth="100.0" />
+            <ImageView fx:id="internetAccessImageView" fitHeight="30.0" fitWidth="30.0" layoutX="870.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@res/icons/drawable-xxxhdpi/ic_network_wifi_blue_A400_48dp.png" />
+               </image>
+            </ImageView>
+         </children>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Pane>
+      <HBox layoutX="36.0" layoutY="74.0" prefHeight="300.0" prefWidth="750.0">
+         <children>
+            <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="200.0" styleClass="card" stylesheets="@../sample/styles/services.css">
+               <children>
+                  <ImageView fitHeight="125.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@res/images/bitcoin.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets top="25.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <HBox prefHeight="65.0" prefWidth="200.0" spacing="20.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="65.0" prefWidth="80.0" spacing="10.0">
+                           <children>
+                              <Text fx:id="bitcoinUSDText" fill="#bdbdbd" strokeType="OUTSIDE" strokeWidth="0.0" text="1.00">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#bdbdbd" strokeType="OUTSIDE" strokeWidth="0.0" text="BTC">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font></Text>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="65.0" prefWidth="80.0" spacing="10.0">
+                           <children>
+                              <Text fx:id="bitcoinRateText" fill="#bdbdbd" strokeType="OUTSIDE" strokeWidth="0.0" text="9000">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font></Text>
+                              <Text fill="#bdbdbd" strokeType="OUTSIDE" strokeWidth="0.0" text="USD">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font></Text>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Button fx:id="buyBitcoin" mnemonicParsing="false" prefHeight="30.0" prefWidth="140.0" styleClass="bitcoinButtons" stylesheets="@styles/crypto.css" text="Buy" textFill="WHITE">
+                     <font>
+                        <Font name="Lato Heavy" size="16.0" />
+                     </font>
+                     <effect>
+                        <DropShadow color="#FF9100" height="22.5" offsetX="2.0" offsetY="2.0" radius="10.125" width="20.0" />
+                     </effect>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" color="#bdbdbd" height="50.0" offsetX="5.0" offsetY="5.0" radius="24.5" width="50.0" />
+               </effect>
+               <HBox.margin>
+                  <Insets right="50.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="200.0" styleClass="card" stylesheets="@../sample/styles/services.css">
+               <children>
+                  <ImageView fitHeight="125.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@res/images/ethereum.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets top="25.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <HBox prefHeight="65.0" prefWidth="200.0" spacing="20.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="65.0" prefWidth="80.0" spacing="10.0">
+                           <children>
+                              <Text fx:id="ethereumUSDText" fill="#bdbdbd" strokeType="OUTSIDE" strokeWidth="0.0" text="1.00">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#bdbdbd" strokeType="OUTSIDE" strokeWidth="0.0" text="ETH">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="65.0" prefWidth="80.0" spacing="10.0">
+                           <children>
+                              <Text fx:id="ethereumRateText" fill="#bdbdbd" strokeType="OUTSIDE" strokeWidth="0.0" text="0.008">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#bdbdbd" strokeType="OUTSIDE" strokeWidth="0.0" text="USD">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Button fx:id="buyEthereum" mnemonicParsing="false" prefHeight="30.0" prefWidth="140.0" styleClass="ethereumButtons" stylesheets="@styles/crypto.css" text="Buy" textFill="WHITE">
+                     <font>
+                        <Font name="Lato Heavy" size="16.0" />
+                     </font>
+                     <effect>
+                        <DropShadow color="#424242" height="22.5" offsetX="2.0" offsetY="2.0" radius="10.125" width="20.0" />
+                     </effect>
+                  </Button>
+               </children>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" color="#bdbdbd" height="50.0" offsetX="5.0" offsetY="5.0" radius="24.5" width="50.0" />
+               </effect>
+               <HBox.margin>
+                  <Insets right="50.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="200.0" styleClass="card" stylesheets="@../sample/styles/services.css">
+               <children>
+                  <ImageView fitHeight="125.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@res/images/monero.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets top="25.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <HBox prefHeight="65.0" prefWidth="200.0" spacing="20.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="65.0" prefWidth="80.0" spacing="10.0">
+                           <children>
+                              <Text fx:id="moneroUSDText" fill="#bdbdbd" strokeType="OUTSIDE" strokeWidth="0.0" text="1.00">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#bdbdbd" strokeType="OUTSIDE" strokeWidth="0.0" text="XMR">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="65.0" prefWidth="80.0" spacing="10.0">
+                           <children>
+                              <Text fx:id="moneroRateText" fill="#bdbdbd" strokeType="OUTSIDE" strokeWidth="0.0" text="0.008">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#bdbdbd" strokeType="OUTSIDE" strokeWidth="0.0" text="USD">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Button fx:id="buyMonero" mnemonicParsing="false" prefHeight="30.0" prefWidth="140.0" styleClass="moneroButtons" stylesheets="@styles/crypto.css" text="Buy" textFill="WHITE">
+                     <font>
+                        <Font name="Lato Heavy" size="16.0" />
+                     </font>
+                     <effect>
+                        <DropShadow color="#FF6D00" height="22.5" offsetX="2.0" offsetY="2.0" radius="10.125" width="20.0" />
+                     </effect>
+                  </Button>
+               </children>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" color="#bdbdbd" height="50.0" offsetX="5.0" offsetY="5.0" radius="24.5" width="50.0" />
+               </effect>
+            </VBox>
+         </children>
+         <opaqueInsets>
+            <Insets right="10.0" />
+         </opaqueInsets>
+      </HBox>
+      <Pane fx:id="paneActivation" layoutX="766.0" layoutY="149.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="225.0" prefWidth="420.0" styleClass="pane" stylesheets="@styles/createAccount.css">
+         <effect>
+            <DropShadow color="#bdbdbd" height="0.0" offsetY="5.0" radius="12.0" width="50.0" />
+         </effect>
+         <children>
+            <HBox layoutX="10.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="140.0" prefWidth="400.0">
+               <children>
+                  <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="140.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@res/icons/drawable-xxxhdpi/ic_account_balance_wallet_blue_A700_48dp.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <Text fill="#bdbdbd" strokeType="OUTSIDE" strokeWidth="0.0" text="wallet" textAlignment="CENTER" wrappingWidth="170.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin></Text>
+                        <TextField fx:id="walletTextField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="170.0" promptText="wallet" styleClass="text-field" stylesheets="@styles/createAccount.css" />
+                        <Line fx:id="accountNumberLine" endX="170.0" stroke="#2962ff" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="139.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@res/icons/drawable-xxxhdpi/ic_monetization_on_blue_A700_48dp.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <Text fill="#bdbdbd" strokeType="OUTSIDE" strokeWidth="0.0" text="amount" textAlignment="CENTER">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Text>
+                        <TextField fx:id="amountTextField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="170.0" promptText="amount" styleClass="text-field" stylesheets="@styles/createAccount.css" />
+                        <Line fx:id="depositLine" endX="170.0" stroke="#2962ff" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Button fx:id="transactionButton" layoutX="116.0" layoutY="171.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="290.0" styleClass="servicesButtons" stylesheets="@../sample/styles/services.css" text="Complete transaction" textFill="WHITE">
+               <font>
+                  <Font name="Lato Heavy" size="16.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#448AFF" height="22.5" offsetX="2.0" offsetY="2.0" radius="10.125" width="20.0" />
+               </effect>
+            </Button>
+            <Text fill="#bdbdbd" layoutX="14.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Calculate" textAlignment="CENTER" wrappingWidth="80.00001382827759" />
+            <Text fx:id="calculatedText" fill="#bdbdbd" layoutX="261.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12.3" textAlignment="CENTER" wrappingWidth="65.00001239776611">
+               <font>
+                  <Font size="16.0" />
+               </font></Text>
+            <Text fx:id="cryptoText" fill="#bdbdbd" layoutX="317.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BTC" textAlignment="CENTER" wrappingWidth="80.00001382827759">
+               <font>
+                  <Font size="14.0" />
+               </font></Text>
+            <Pane layoutX="34.0" layoutY="139.0" prefHeight="40.0" prefWidth="40.0">
+               <children>
+                  <ImageView fx:id="createImageView1" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@res/icons/drawable-xxxhdpi/ic_assessment_blue_A700_48dp.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="calculateButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="createButton" stylesheets="@styles/createAccount.css" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="panePolicy" layoutX="766.0" layoutY="74.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="420.0" styleClass="pane" stylesheets="@styles/createAccount.css">
+         <effect>
+            <DropShadow color="#bdbdbd" height="0.0" offsetY="5.0" radius="12.0" width="50.0" />
+         </effect>
+         <children>
+            <HBox alignment="CENTER" layoutX="14.0" layoutY="5.0" prefHeight="50.0" prefWidth="400.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@res/icons/drawable-xxxhdpi/ic_account_balance_blue_A700_48dp.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Text fill="#bdbdbd" strokeType="OUTSIDE" strokeWidth="0.0" text="Acc. no:">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin></Text>
+                  <Text fx:id="basicsText121111" fill="#bdbdbd" strokeType="OUTSIDE" strokeWidth="0.0" />
+                  <VBox prefHeight="50.0" prefWidth="170.0">
+                     <children>
+                        <TextField fx:id="exchangeAmountTextField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="170.0" promptText="10011536543670" styleClass="text-field" stylesheets="@styles/createAccount.css">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <Line fx:id="depositLine" endX="170.0" stroke="#2962ff" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+   </children>
+</Pane>

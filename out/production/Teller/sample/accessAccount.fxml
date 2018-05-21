@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AccessAccountController">
+    <children>
+        <Pane fx:id="topPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" prefHeight="60.0" prefWidth="1200.0" styleClass="topPane" stylesheets="@../sample/styles/services.css">
+            <effect>
+                <DropShadow color="#bdbdbd" height="0.0" offsetY="5.0" radius="12.0" width="50.0" />
+            </effect>
+            <children>
+                <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="387.0">
+                    <children>
+                        <Pane layoutX="1000.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0">
+                            <padding>
+                                <Insets top="5.0" />
+                            </padding>
+                            <HBox.margin>
+                                <Insets right="20.0" />
+                            </HBox.margin>
+                            <children>
+                                <ImageView fx:id="lockImageView" fitHeight="25.0" fitWidth="25.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                        <Image url="@../sample/res/icons/drawable-xxxhdpi/ic_lock_outline_blue_A700_48dp.png" />
+                                </ImageView>
+                                <Button fx:id="lockButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleLockButtonClicked" onMouseEntered="#handleLockButtonEntered" onMouseExited="#handleLockButtonExited" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent;" />
+                            </children>
+                        </Pane>
+                        <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="65.0" prefWidth="65.0">
+                            <HBox.margin>
+                                <Insets bottom="5.0" top="5.0" />
+                            </HBox.margin>
+                            <children>
+                                <ImageView fitHeight="50.0" fitWidth="55.0" layoutX="15.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../sample/res/images/profile.gif" />
+                                    </image>
+                                </ImageView>
+                                <Circle fill="#00ff09" layoutX="24.0" layoutY="51.0" radius="8.0" stroke="#00ff098a" strokeType="INSIDE" />
+                            </children>
+                        </Pane>
+                        <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="147.0">
+                            <padding>
+                                <Insets top="5.0" />
+                            </padding>
+                            <children>
+                                <Text fill="#0000007d" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Teller" wrappingWidth="147.00000286102295">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Text>
+                            </children>
+                        </Pane>
+                        <Pane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0">
+                            <children>
+                                <ImageView fx:id="chatImageView" fitHeight="25.0" fitWidth="25.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../sample/res/icons/drawable-xxxhdpi/ic_chat_bubble_outline_blue_A700_48dp.png" />
+                                    </image>
+                                </ImageView>
+                                <Button fx:id="chatButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseEntered="#handleChatButtonEntered" onMouseExited="#handleChatButtonExited" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: transparent;" />
+                            </children>
+                        </Pane>
+                    </children>
+                </HBox>
+            <Pane layoutX="1156.0" layoutY="5.0" prefHeight="50.0" prefWidth="50.0">
+               <children>
+                  <ImageView fx:id="backImageView" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@res/icons/drawable-xxxhdpi/ic_keyboard_arrow_left_blue_A700_48dp.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="backButton" layoutX="1.0" layoutY="-2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleBackButton" onMouseEntered="#handleBackButtonMouseEntered" onMouseExited="#handleBackButtonMouseExited" prefHeight="50.0" prefWidth="50.0" styleClass="createButton" stylesheets="@styles/createAccount.css" />
+               </children>
+            </Pane>
+            </children>
+            <cursor>
+                <Cursor fx:constant="DEFAULT" />
+            </cursor>
+        </Pane>
+      <VBox alignment="TOP_CENTER" layoutX="5.0" layoutY="83.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="255.0" styleClass="card" stylesheets="@../sample/styles/services.css">
+         <children>
+            <ImageView fitHeight="84.0" fitWidth="115.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                   <Image url="@../sample/res/images/customer.gif" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="20.0" top="10.0" />
+               </VBox.margin>
+            </ImageView>
+            <Text fx:id="accountName" fill="#bdbdbd" layoutX="49.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BankTeller Customer">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+            </Text>
+            <TextField fx:id="accountNumberTextField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleAccountNumber" prefHeight="25.0" prefWidth="220.0" styleClass="text-field" stylesheets="@styles/createAccount.css" />
+            <Line endX="220.0" stroke="#2962ff" />
+            <Pane prefHeight="50.0" prefWidth="50.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="92.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@res/icons/drawable-xxxhdpi/ic_swap_vertical_circle_blue_A700_48dp.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="syncAccountButton" layoutX="92.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleSyncAccount" prefHeight="50.0" prefWidth="50.0" styleClass="createButton" stylesheets="@styles/createAccount.css" />
+               </children>
+            </Pane>
+         </children>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="#bdbdbd" height="50.0" offsetX="5.0" offsetY="5.0" radius="24.5" width="50.0" />
+         </effect>
+      </VBox>
+      <Pane layoutX="272.0" layoutY="89.0" prefHeight="250.0" prefWidth="650.0">
+         <children>
+            <BarChart fx:id="barChart" alternativeRowFillVisible="false" animated="false" barGap="10.0" horizontalGridLinesVisible="false" layoutX="-1.0" layoutY="-4.0" legendVisible="false" prefHeight="250.0" prefWidth="650.0" stylesheets="@styles/accessAccount.css" verticalGridLinesVisible="false" verticalZeroLineVisible="false">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </BarChart>
+         </children>
+      </Pane>
+      <VBox alignment="TOP_CENTER" layoutX="975.0" layoutY="83.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="225.0" prefWidth="210.0" styleClass="card" stylesheets="@../sample/styles/services.css">
+         <children>
+            <ImageView fitHeight="87.0" fitWidth="87.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../sample/res/icons/drawable-xxxhdpi/ic_person_add_blue_A200_48dp.png" />
+               </image>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </ImageView>
+            <TextField fx:id="amountTextField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleAccountNumber" prefHeight="25.0" prefWidth="200.0" styleClass="text-field" stylesheets="@styles/createAccount.css" />
+            <Line endX="200.0" stroke="#2962ff" />
+            <Pane>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+               <children>
+                  <Button fx:id="depositButton" layoutX="10.0" layoutY="8.0" mnemonicParsing="false" onAction="#handleDeposit" prefHeight="30.0" prefWidth="190.0" styleClass="depositButton" text="Deposit funds" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Lato Heavy" size="14.0" />
+                     </font>
+                     <effect>
+                        <DropShadow color="#448AFF" height="22.5" offsetX="2.0" offsetY="2.0" radius="10.125" width="20.0" />
+                     </effect>
+                     <stylesheets>
+                        <URL value="@styles/services.css" />
+                        <URL value="@styles/accessAccount.css" />
+                     </stylesheets>
+                  </Button>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="28.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@res/icons/drawable-xxxhdpi/ic_add_white_48dp.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane>
+               <children>
+                  <Button fx:id="withdrawButton" layoutX="10.0" layoutY="8.0" mnemonicParsing="false" onAction="#handleWithdraw" prefHeight="30.0" prefWidth="190.0" styleClass="withdrawButton" stylesheets="@styles/accessAccount.css" text="Withdraw funds" textFill="WHITE">
+                     <font>
+                        <Font name="Lato Heavy" size="14.0" />
+                     </font>
+                     <effect>
+                        <DropShadow color="#448AFF" height="22.5" offsetX="2.0" offsetY="2.0" radius="10.125" width="20.0" />
+                     </effect>
+                  </Button>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="26.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@res/icons/drawable-xxxhdpi/ic_remove_white_48dp.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="#bdbdbd" height="50.0" offsetX="5.0" offsetY="5.0" radius="24.5" width="50.0" />
+         </effect>
+      </VBox>
+      <Pane fx:id="cardPane" layoutX="36.0" layoutY="365.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="640.0" styleClass="card" stylesheets="@../sample/styles/services.css">
+         <children>
+            <ImageView fitHeight="175.0" fitWidth="345.0" layoutX="7.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+               </image>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </ImageView>
+            <VBox layoutX="366.0" prefHeight="200.0" prefWidth="137.0">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+               <children>
+                  <Text fill="#bdbdbd" strokeType="OUTSIDE" strokeWidth="0.0" text="Credit available">
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#bdbdbd" layoutX="10.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Available cash">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#bdbdbd" layoutX="10.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Outstanding">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#bdbdbd" layoutX="10.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Calendar">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#bdbdbd" layoutX="10.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bonus" textAlignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </VBox>
+            <VBox layoutX="503.0" prefHeight="200.0" prefWidth="137.0">
+               <children>
+                  <Text fx:id="creditAvailableText" fill="#bdbdbd" strokeType="OUTSIDE" strokeWidth="0.0" text="\$1200.00">
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="availableCashText" fill="#bdbdbd" layoutX="10.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$2,050.00">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="outstandingText" fill="#bdbdbd" layoutX="10.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$210.00">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#bdbdbd" layoutX="10.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12/18">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="bonusText" fill="#bdbdbd" layoutX="10.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$75.00" textAlignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </VBox>
+            <ImageView fx:id="creditCard" fitHeight="188.0" fitWidth="314.0" layoutX="7.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../sample/res/images/Card.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="#bdbdbd" height="50.0" offsetX="5.0" offsetY="5.0" radius="24.5" width="50.0" />
+         </effect>
+      </Pane>
+      <VBox alignment="TOP_CENTER" layoutX="714.0" layoutY="365.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="471.0" styleClass="card" stylesheets="@../sample/styles/services.css">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="178.0" prefWidth="471.0">
+               <children>
+                  <Text fill="#bdbdbd" strokeType="OUTSIDE" strokeWidth="0.0" text="Recent Activity" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Text>
+                  <HBox alignment="CENTER_LEFT" prefHeight="38.0" prefWidth="471.0">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@res/icons/drawable-xxxhdpi/ic_card_giftcard_blue_48dp.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Text fill="#bdbdbd" strokeType="OUTSIDE" strokeWidth="0.0" text="26 April" textAlignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Text fill="#bdbdbd" layoutX="40.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-$100.00" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold Italic" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Text fill="#bdbdbd" layoutX="40.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shopping gift card" textAlignment="CENTER">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="31.0" prefHeight="38.0" prefWidth="471.0">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@res/icons/drawable-xxxhdpi/ic_add_shopping_cart_blue_A400_48dp.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Text fill="#bdbdbd" strokeType="OUTSIDE" strokeWidth="0.0" text="27 April" textAlignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Text fill="#bdbdbd" layoutX="40.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-$254.00" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold Italic" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Text fill="#bdbdbd" layoutX="40.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Amazon checkout" textAlignment="CENTER">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="69.0" prefHeight="38.0" prefWidth="471.0">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@res/icons/drawable-xxxhdpi/ic_flight_black_48dp.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Text fill="#bdbdbd" strokeType="OUTSIDE" strokeWidth="0.0" text="28 April" textAlignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Text fill="#bdbdbd" layoutX="40.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-$700.00" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold Italic" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Text fill="#bdbdbd" layoutX="40.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Emirates Airline ticket" textAlignment="CENTER">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Pane prefHeight="111.0" prefWidth="471.0">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+               <children>
+                  <Button fx:id="deleteAccountButton" layoutX="267.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleDelete" prefHeight="30.0" prefWidth="190.0" styleClass="deleteButton" stylesheets="@styles/accessAccount.css" text="Delete Account" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Lato Heavy" size="14.0" />
+                     </font>
+                     <effect>
+                        <DropShadow color="#448AFF" height="22.5" offsetX="2.0" offsetY="2.0" radius="10.125" width="20.0" />
+                     </effect>
+                  </Button>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="428.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@res/icons/drawable-xxxhdpi/ic_delete_sweep_white_48dp.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="#bdbdbd" height="50.0" offsetX="5.0" offsetY="5.0" radius="24.5" width="50.0" />
+         </effect>
+      </VBox>
+    </children>
+</Pane>

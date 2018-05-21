@@ -1,0 +1,17 @@
+.topPane{
+    -fx-background-color: white;
+}
+.card{
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+}
+
+.servicesButtons {
+    -fx-background-radius: 15px;
+    -fx-border-radius: 30;
+    -fx-background-color: #448AFF;
+}
+
+.servicesButtons:hover {
+    -fx-background-color: linear-gradient(to right, #2962FF 0%, #2979FF 25%, #448AFF 50%, #82B1FF 100%);
+}
