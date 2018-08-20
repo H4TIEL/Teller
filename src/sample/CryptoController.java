@@ -131,7 +131,7 @@ public class CryptoController {
 
         Request request = new Request.Builder()
                 .url("https://rest.coinapi.io/v1/exchangerate/" + symbol + "/USD")
-                .addHeader("X-CoinAPI-Key", "9629A21D-7FAD-492C-9D55-B6E95FF89CDB")
+                .addHeader("X-CoinAPI-Key", "API-KEY:)")
                 .build();
 
         try {
