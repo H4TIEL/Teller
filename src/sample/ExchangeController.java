@@ -228,7 +228,7 @@ public class ExchangeController {
         OkHttpClient client = new OkHttpClient();
 
         Request request = new Request.Builder()
-                .url("https://openexchangerates.org/api/latest.json?app_id=dd7ef3115d2447dc8b5eb49eec3838b1")
+                .url("https://openexchangerates.org/api/latest.json?app_id=APP ID :)")
                 .build();
 
         try {
